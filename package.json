@@ -1,0 +1,50 @@
+{
+    "name": "aguavista_sap_api",
+    "version": "1.0.0",
+    "description": "Proporcione funciones varias para consultar tablas de la DB HANA SAP utilizada por el country club Aguavista",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "pm2": "node ./node_modules/pm2/bin/pm2  start ecosystem.config.js --watch",
+        "pm2-list": "node ./node_modules/pm2/bin/pm2 list",
+        "pm2-stop": "node ./node_modules/pm2/bin/pm2 stop apisap"
+    },
+    "babel": {
+        "plugins": [
+            "@babel/plugin-proposal-optional-chaining"
+        ]
+    },
+    "keywords": [
+        "sap",
+        "hana",
+        "aguavista"
+    ],
+    "author": "Sonia Toledo",
+    "license": "ISC",
+    "dependencies": {
+        "@ironsoftware/ironpdf": "^2024.1.1",
+        "@sap/hana-client": "^2.13.22",
+        "express": "^4.18.1",
+        "facturacionelectronicapy-kude": "^1.0.18",
+        "facturacionelectronicapy-qrgen": "^1.0.7",
+        "facturacionelectronicapy-setapi": "^1.0.28",
+        "facturacionelectronicapy-xmlgen": "^1.0.228",
+        "facturacionelectronicapy-xmlsign": "^1.0.12",
+        "html-pdf": "^3.0.1",
+        "mysql": "github:mysqljs/mysql",
+        "mysql2": "^3.6.5",
+        "pm2": "^5.2.0",
+        "sequelize": "^6.35.1",
+        "xml": "^1.0.1"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+        "babel-eslint": "^10.1.0"
+    },
+    "eslintConfig": {
+        "parserOptions": {
+            "ecmaVersion": 2020
+        }
+    }
+}
